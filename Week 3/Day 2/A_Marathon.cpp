@@ -19,7 +19,7 @@
 #define no cout << "NO" << endl
 #define minus cout << -1 << endl;
 #define mp map<ll, ll>
-//  problem link : https://codeforces.com/contest/1692/problem/A
+//  problem link : https://codeforces.com/contest/1692/problem/A 
 using namespace std;
 int main()
 {
