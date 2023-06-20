@@ -28,38 +28,17 @@ int main()
     cin >> t;
     while (t--)
     {
-        string s;
-        cin >> s;
-        bool found = false;
-        if (s == "e" || s=="YesYes" || s== "sYes" || s== "esY")
-            cout << "YES" << endl;
-        else
+        string c,s;
+        for (int i = 0; i < 20 ; i++)
         {
-            for (int i = 0; i < (s.size()-3); i++)
-            {
-                if(s.substr(i,3)=="esy")
-                {
-                    cout << "YES" << endl;
-                    break;
-                }
-            }
-            for (int i = 0; i < (s.size()-4); i++)
-            {
-                if(s.substr(i,4)=="sYes")
-                {
-                    cout << "YES" << endl;
-                    break;
-                }
-            }
-            for (int i = 0; i < (s.size()-6); i++)
-            {
-                if(s.substr(i,6)=="YesYes")
-                {
-                    cout << "YES" << endl;
-                    break;
-                }
-            }
+            c+="Yes";
         }
-
+        
+        cin >> s;
+        
+        if (c.find(s)!=-1)
+            cout << "YES" << endl;
+        else 
+            cout << "NO" << endl;
     }
 }
