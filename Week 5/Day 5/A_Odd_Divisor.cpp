@@ -24,7 +24,7 @@ void solve()
 {
     ll n;
     cin >> n;
-    if(n%2)
+    if(n%2==0)
     {
         yes;
         return;
@@ -33,7 +33,7 @@ void solve()
     {
         n/=2;
     }
-    if(n==1)yes;
+    if(n>1)yes;
     else no ;
     return;
 }
