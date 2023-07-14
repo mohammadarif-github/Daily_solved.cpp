@@ -30,15 +30,23 @@ int main()
         int n;
         cin >> n;
         vector<int> v(n);
-        int ans = INT_MAX, mini = INT_MAX;
+        vector<ll> a;
         for (int i = 0; i < n; i++)
         {
             cin >> v[i];
         }
-        for (int i = 0; i < n - 1; i++)
+
+        a.push_back(abs(v[0] - v[1]));
+        a.push_back(abs(v[n - 1] - v[n - 2]));
+
+        for (int i = 1; i <= n - 1; i++)
         {
-            ans = min(ans, abs(v[i] - v[i + 1]));
+            ll x = abs(v[i] - v[i + 1]);
+            ll y = abs(v[i] - v[i - 1]);
+            a.push_back(min(x, y));
         }
-        cout << ans << endl;
+        
+        sort(a.begin(), a.end());
+        cout << a[0] << endl;
     }
 }
