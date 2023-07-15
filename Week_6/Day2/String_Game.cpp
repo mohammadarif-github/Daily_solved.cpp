@@ -31,25 +31,14 @@ int main()
         int n;
         cin >> n >> s;
         bool zl = false, ra = false;
-
-        for (int i = 0; i < n - 1; i++)
+        int cnt_0 = 0,cnt_1 = 0 ;
+        for (int i = 0; i < n ; i++)
         {
-            if (s[i] != s[i + 1])
-            {
-                if (!zl)
-                {
-                    zl = true;
-                    ra = false;
-                }
-                else if(!ra)
-                {
-                    ra = true;
-                    zl = false;
-                }
-                i++;
-            }
+            if(s[i]=='0')cnt_0++;
+            else cnt_1++;
         }
-        if (zl)
+        int mini = min(cnt_0,cnt_1);
+        if (mini%2)
             cout << "Zlatan" << endl;
         else
             cout << "Ramos" << endl;
