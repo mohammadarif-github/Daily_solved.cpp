@@ -31,21 +31,13 @@ int main()
         cin >> n;
         ll ans = n / 2 + (n % 2);
         cout << ans << endl;
-        int x = 1,cnt=0;
-        if (ans > 1)
+        int i = 1, j = n * 3;
+        for (int k = 0; k < ans; k++)
         {
-            for (int i = 1; i <= ans ; i++)
-            {
-                cout << x << " " << x + 1 << endl;
-                cnt ++;
-                
-            }
-        }
-        // BANBANBAN
-        // BANBAN
-        
-        {
-            cout << x + 1 << " " << x + 5 << endl;
+            
+            cout << i << " " << j << endl;
+            i += 3;
+            j -= 3;
         }
     }
 }
