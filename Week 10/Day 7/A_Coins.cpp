@@ -24,10 +24,14 @@ int main()
 {
     boost;
     int t = 1;
-    //cin >> t;
+    cin >> t;
     while (t--)
     {
-        
+        ll n,k;
+        cin >>n >> k;
+        if(n%k==0 || n%2==0)yes;
+        else if((n-k)%2==0)yes;
+        else no;
     }
     
 }
