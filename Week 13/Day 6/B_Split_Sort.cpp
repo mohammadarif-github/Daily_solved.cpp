@@ -29,17 +29,19 @@ int main()
     {
         int n;
         cin >> n;
-        vector<int>v(n);
-        for (int i = 0; i < n; i++)
+        vector<int> v(n+1);
+        map<int, int> mp;
+        for (int i = 1; i <= n; i++)
         {
             cin >> v[i];
+            mp[v[i]] = i;
         }
-        int ans = 0 ;
-        for (int i = 0; i < n-1; i++)
+        int ans = 0;
+        for (int i = 1; i <= n - 1; i++)
         {
-            if(v[i]>v[i+1])ans++;
+            if (mp[i] > mp[i + 1])
+                ans++;
         }
         cout << ans << endl;
     }
-    
 }
