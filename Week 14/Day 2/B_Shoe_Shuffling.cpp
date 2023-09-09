@@ -49,17 +49,23 @@ int main()
             else if (it.second % 2 == 0)
                 ev++;
         }
-
+        vector<int>ans;
         if (ok)
         {
             for (int i = 0; i < n;)
             {
                 for (int j = i + mp[v[i]]; j > i; j--)
                 {
-                    cout << j << " ";
+                    ans.push_back(j);
                 }
                 i+=mp[v[i]];
             }
+            for (int i = 0; i < n; i++)
+            {
+                if(ans[i]==i+1)swap(ans[i],ans[i+1]);
+                cout << ans[i] << " ";
+            }
+            
             cout << endl;
         }
         else
